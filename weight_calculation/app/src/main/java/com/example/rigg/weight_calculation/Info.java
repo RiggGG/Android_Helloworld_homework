@@ -8,23 +8,23 @@ import java.io.Serializable;
 
 public class Info implements Serializable {
     private String sex="";
-    private int height=0;
+    private double height=0.00;
     private String name="";
     public String getSex() {
-        String str1="Mr";
-        String str2="Ms";
-        if(sex.equals("man"))
-            return str1;
-        else
-            return str2;
+        if(this.sex.equals("woman")) {
+            this.sex = "Ms";
+        }else {
+            this.sex = "Mr";
+        }
+        return sex;
     }
     public void setSex(String sex) {
         this.sex = sex;
     }
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
-    public void setHeight(int Height) {
+    public void setHeight(double Height) {
         this.height = Height;
     }
     public void setName(String Name){
@@ -33,6 +33,14 @@ public class Info implements Serializable {
     public String getName(){
         return name;
     }
-
-
+    public double getWeight(){
+        double weight= 0.0;
+        if (this.sex.equals("Ms")) {
+            weight = ( this.height - 70 ) * 0.6;
+        }
+        else{
+            weight = ( this.height - 80 ) * 0.7;
+        }
+        return weight;
+    }
 }

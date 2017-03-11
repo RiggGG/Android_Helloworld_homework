@@ -39,19 +39,24 @@ public class MainActivity extends Activity {
                     Toast.makeText(MainActivity.this, "please input your name", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                int Height=Integer.parseInt(height);
+                double Height=Integer.parseInt(height);
                 info.setHeight(Height);
                 info.setName(name);
+                String usex = "";
                 for (int i = 0; i < sex.getChildCount(); i++) {
+                    //根据索引值获取单选按钮
                     RadioButton r= (RadioButton) sex.getChildAt(i);
+                    //判断单选按钮是否被选中
                     if (r.isChecked()) {
-                        info.setSex(r.getText().toString());
+                        //获取被选中的单选按钮的值
+                        usex = r.getText().toString();
+                        info.setSex(usex);
                         break;
                     }
                 }
                 Intent intent=new Intent(MainActivity.this,ResultActivity.class);
                 Bundle bundle=new Bundle();
-                bundle.putSerializable("info", info);
+                bundle.putSerializable("Info", info);
                 intent.putExtras(bundle);
                 startActivity(intent);
             }

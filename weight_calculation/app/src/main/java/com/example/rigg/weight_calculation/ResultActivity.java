@@ -12,31 +12,16 @@ import android.widget.TextView;
  */
 
 public class ResultActivity extends Activity {
-    private TextView sex;
-    private TextView name;
-    private TextView weight;
-    private TextView height;
+    private TextView pageResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-        Bundle bundle=new Bundle();
-        Info info = (Info) bundle.getSerializable("info");
+        pageResult = (TextView)findViewById(R.id.weight);
+        Bundle bundle = this.getIntent().getExtras();//add this can run but can't get varible sex
+        Info info = (Info) bundle.getSerializable("Info");
 
-        name.setText("Hello"+info.getSex()+"");
-        sex.setText(info.getName()+",");
-        height.setText("your height is "+info.getHeight()+" cm");
-        weight.setText("your weight is "+getWeight(info.getSex(),info.getHeight())+" kg in theory");
-    }
-    public String getWeight(String sex,float height){
-        String weight="";
-        NumberFormat nFormat=new DecimalFormat();
-        if (sex.equals("Mr")) {
-            weight=nFormat.format((height-80)*0.7);
-        }
-        if (sex.equals("Ms")) {
-            weight=nFormat.format((height-70)*0.6);
-        }
-        return weight;
+        pageResult.setText("Hello "+info.getSex()+"."+info.getName()+",\n"+"your height is "+info.getHeight()+" cm\n"
+                +"your weight is "+info.getWeight()+" kg in theory");
     }
 }
