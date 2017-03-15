@@ -18,6 +18,9 @@
         <activity
             android:name="com.example.rigg.weight_calculation.ResultActivity">
         </activity>
+        <activity
+            android:name="com.example.rigg.weight_calculation.ShowActivity">
+        </activity>
     </application>
 
 </manifest>

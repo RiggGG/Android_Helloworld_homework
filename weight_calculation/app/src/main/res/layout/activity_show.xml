@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:id="@+id/text1"
+        android:text="this is linear layout"/>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/text5"
+                android:textSize="13dp"
+                android:text="this is table layout and first line"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/text3"
+                android:layout_marginLeft="1dp"
+                android:textSize="13dp"
+                android:text="this is table layout and second line"/>
+        </TableRow>
+    </TableLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text4"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:text="the linear layout is end of here"/>
+
+    <Button
+        android:text="go relativelaout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3" />
+</LinearLayout>
