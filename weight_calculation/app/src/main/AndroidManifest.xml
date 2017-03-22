@@ -21,6 +21,12 @@
         <activity
             android:name="com.example.rigg.weight_calculation.ShowActivity">
         </activity>
+        <activity
+            android:name="com.example.rigg.weight_calculation.ProblemActivity">
+        </activity>
+        <activity
+            android:name="com.example.rigg.weight_calculation.AnswerActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -42,4 +42,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button3" />
+
+    <Button
+        android:text="deal with the math problem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button4"
+        android:layout_marginTop="20dp"/>
 </LinearLayout>
