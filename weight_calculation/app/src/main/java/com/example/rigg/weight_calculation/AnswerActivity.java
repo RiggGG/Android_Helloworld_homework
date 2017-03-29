@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -15,12 +16,16 @@ import android.widget.TextView;
 public class AnswerActivity extends Activity{
     private TextView tex1;
     private Button btn;
+    private ImageView image2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answer);
         tex1 = (TextView)findViewById(R.id.tex1);
         btn = (Button)findViewById(R.id.button6);
+        image2 = (ImageView)findViewById(R.id.imageView2);
+        image2.setBackground(getResources().getDrawable(R.drawable.result));
+        image2.setVisibility(View.VISIBLE);
         Intent intent = getIntent();
         String select = intent.getStringExtra("select");
         if(select.equals("C. e的a-b次方")){

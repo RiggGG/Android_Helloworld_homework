@@ -17,7 +17,7 @@ public class ProblemActivity extends Activity{
     private Button btn;
     private RadioGroup radiog;
     private Button btn7;
-    private ImageView im1;
+    private ImageView image1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +25,9 @@ public class ProblemActivity extends Activity{
         btn = (Button) findViewById(R.id.button5);
         radiog = (RadioGroup)findViewById(R.id.radiogroupp);
         btn7 = (Button)findViewById(R.id.button7);
-        im1 = (ImageView)findViewById(R.id.imageView);
+        image1 = (ImageView)findViewById(R.id.imageView);
+        image1.setBackground(getResources().getDrawable(R.drawable.question));
+        image1.setVisibility(View.VISIBLE);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
