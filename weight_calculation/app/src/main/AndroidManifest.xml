@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.rigg.weight_calculation" >
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="23" />
 
     <application
         android:allowBackup="true"
@@ -27,6 +30,16 @@
         <activity
             android:name="com.example.rigg.weight_calculation.AnswerActivity">
         </activity>
+        <activity
+            android:name="com.example.rigg.weight_calculation.ActionbarActivity">
+        </activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
 </manifest>
